@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int mcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int mcm(int a, int b) {
+    return (a * b) / mcd(a, b);
+}
+
+int main() {
+    int a, b;
+    
+
+    cout << "El MCD es: " << mcd(a, b) << endl;
+    cout << "El MCM es: " << mcm(a, b) << endl;
+
+    return 0;
+}
