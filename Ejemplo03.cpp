@@ -21,6 +21,13 @@ void invertirArreglo(int A[],int n){
         A[n - 1 - i] = aux;
     }
 }
+int sumarArreglo(int A[], int n){
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum=sum +A[i];
+    }
+    return sum;
+}
 int main() {
     int n;
     int A[100];
@@ -31,10 +38,14 @@ int main() {
     leerArreglo(A,n);
     cout<<"Arreglo original";
     imprimirArreglo (A,n);
+    int sumaOriginal=sumarArreglo(A,n);
+    cout<<"la suma de los elementos del Arreglo original es: "<<sumaOriginal<<endl;
     invertirArreglo(A,n);
     cout<<"arreglo invertido";
     imprimirArreglo (A,n);
-    
+    imprimirArreglo(A,n);
+    int sumaInvertido=sumarArreglo(A,n);
+    cout<<"la suma de los elementos del Arreglo invertido es: "<<sumaInvertido<<endl;
     
     return 0;
 }
